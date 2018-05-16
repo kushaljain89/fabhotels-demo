@@ -260,7 +260,7 @@ class AppRoot extends React.Component {
                             </View>
                         </View>
 
-                        <View style={{width: window.width, height: 10, backgroundColor: Colors.lightGrey}}/>
+                        <View style={{width: window.width, height: 5, backgroundColor: Colors.lightGrey}}/>
 
                         <View style={{
                             width: window.width,
@@ -270,112 +270,62 @@ class AppRoot extends React.Component {
                                 <Text style={{fontSize: 20, fontWeight: 'bold', color: '#4d4b4e'}}>Hotel Map</Text>
                             </View>
                             <View style={Styles.mapViewWrapper}>
-                                
-                            </View>
-                            <View style={{paddingRight: 10, paddingLeft: 10, height: 100}}>
-
-                            </View>
-                        </View>
-
-                        <View style={{
-                            width: window.width,
-                            height: 150,
-                            paddingBottom: 10,
-                            backgroundColor: '#f0f3f7'
-                        }}>
-                            <View style={{
-                                backgroundColor: '#ffffff',
-                                height: 130,
-                                paddingLeft: 10,
-                                paddingRight: 10,
-                                paddingTop: 15
-                            }}>
-                                <View style={{height: 20, flexDirection: 'row'}}>
-                                    <View style={{flex: 1.5}}>
-                                        <Text style={{color: '#4d4b4e', fontSize: 20, fontWeight: 'bold'}}>547
-                                            Reviews</Text>
-                                    </View>
-                                    <View style={{flex: 0.5, alignItems: 'flex-end'}}>
-                                        <Text style={{color: 'rgb(55, 154, 255)'}}>VIEW ALL</Text>
-                                    </View>
+                                <View>
+                                    <Text>Hello</Text>
                                 </View>
-                                <View style={{height: 30, paddingTop: 20, flexDirection: 'row'}}>
-                                    <View style={{
-                                        flex: 0.16,
-                                        backgroundColor: '#00b96e',
-                                        height: 20,
-                                        marginLeft: 3,
-                                        alignItems: 'center',
-                                        justifyContent: 'center'
-                                    }}>
-                                        <Text style={{
-                                            fontSize: 16,
-                                            color: '#ffffff',
-                                            fontWeight: 'bold'
-                                        }}>4.0/5</Text>
-                                    </View>
-                                    <View style={{
-                                        flex: 0.44,
-                                        height: 20,
-                                        paddingLeft: 3,
-                                        flexDirection: 'column',
-                                        alignItems: 'flex-start',
-                                        justifyContent: 'center'
-                                    }}>
-                                        <Text style={{fontSize: 15, color: '#4d4b4e', fontWeight: 'bold'}}> Sachin
-                                            Rangwani </Text>
-                                    </View>
-                                    <View style={{
-                                        flex: 0.4,
-                                        height: 20,
-                                        paddingLeft: 3,
-                                        flexDirection: 'column',
-                                        alignItems: 'flex-end',
-                                        justifyContent: 'center'
-                                    }}>
-                                        <Text style={{fontSize: 14, color: '#4d4b4e', opacity: 0.7}}> 07 May </Text>
-                                    </View>
+                                <View style={{flexDirection: 'row', position: 'absolute', bottom: 0}}>
+                                    <View style={{flex: 0.5, height: 20, backgroundColor: Colors.white}}/>
+                                    <View style={[Styles.triangleCorner, {
+                                        transform: [
+                                            {rotate: '270deg'}
+                                        ]
+                                    }]}/>
+                                    <View style={[Styles.triangleCorner, {
+                                        transform: [
+                                            {rotate: '180deg'}
+                                        ]
+                                    }]}/>
+                                    <View style={{flex: 0.5, height: 20, backgroundColor: Colors.white}}/>
+                                </View>
+                            </View>
+                            <View style={{paddingRight: 10, paddingLeft: 10, height: 165}}>
+                                <View>
+                                    <Text style={{fontSize: 14, fontWeight: 'bold', color: Colors.black}}>Nearest
+                                        Landmarks</Text>
+                                </View>
+                                {
+                                    [{
+                                        place: 'Airport',
+                                        distance: 5.3
+                                    }, {
+                                        place: 'Metro Station',
+                                        distance: 7.6
+                                    }, {
+                                        place: 'Railway Station',
+                                        distance: 9.5
+                                    }].map((place, index) => <View style={{flexDirection: 'row', paddingTop: 15}}
+                                                                   key={index}>
+                                        <View style={{flex: 1, alignItems: 'flex-start'}}>
+                                            <Text style={{color: Colors.black}}>{place.place}</Text>
+                                        </View>
+                                        <View style={{flex: 1, alignItems: 'flex-end'}}>
+                                            <Text style={{color: Colors.black}}>{place.distance} Km</Text>
+                                        </View>
+                                    </View>)
+                                }
+                                <View style={{alignItems: 'flex-end', paddingTop: 20}}>
+                                    <Text style={{color: 'rgb(55, 154, 255)', fontSize: 14, fontWeight: 'bold'}}>VIEW
+                                        MORE</Text>
                                 </View>
                             </View>
                         </View>
-                        <View style={{width: window.width, height: 60, flexDirection: 'row'}}>
-                            <View style={{flex: 1, paddingLeft: 10, justifyContent: 'center'}}>
-                                <Text style={{fontSize: 16, fontWeight: 'bold', color: '#4d4b4e'}}>Cancellation
-                                    Policies</Text>
-                            </View>
-                            <View style={{
-                                flex: 1,
-                                paddingRight: 10,
-                                alignItems: 'flex-end',
-                                justifyContent: 'center'
-                            }}>
-                                <Entypo name="chevron-thin-down"
-                                        style={{fontSize: 26, color: 'rgb(55, 154, 255)'}}/>
-                            </View>
-                        </View>
-                        <View style={{width: window.width, height: 1, backgroundColor: '#f0f3f7', opacity: 0.7}}>
-                        </View>
-                        <View style={{width: window.width, height: 60, flexDirection: 'row'}}>
-                            <View style={{flex: 1, paddingLeft: 10, justifyContent: 'center'}}>
-                                <Text style={{fontSize: 16, fontWeight: 'bold', color: '#4d4b4e'}}>Children and
-                                    Extra Beds</Text>
-                            </View>
-                            <View style={{
-                                flex: 1,
-                                paddingRight: 10,
-                                alignItems: 'flex-end',
-                                justifyContent: 'center'
-                            }}>
-                                <Entypo name="chevron-thin-down"
-                                        style={{fontSize: 26, color: 'rgb(55, 154, 255)'}}/>
-                            </View>
-                        </View>
+
                         <View style={{
                             width: window.width,
                             height: 180,
                             paddingTop: 10,
                             paddingBottom: 10,
-                            backgroundColor: '#f0f3f7'
+                            backgroundColor: Colors.lightGrey
                         }}>
                             <View style={{flexDirection: 'row', paddingTop: 15}}>
                                 <View style={{
@@ -425,6 +375,182 @@ class AppRoot extends React.Component {
                                 </View>
                             </View>
                         </View>
+
+                        <View style={{width: window.width, height: 60, flexDirection: 'row'}}>
+                            <View style={{flex: 1, paddingLeft: 10, justifyContent: 'center'}}>
+                                <Text style={{fontSize: 16, fontWeight: 'bold', color: '#4d4b4e'}}>Cancellation
+                                    Policies</Text>
+                            </View>
+                            <View style={{
+                                flex: 1,
+                                paddingRight: 10,
+                                alignItems: 'flex-end',
+                                justifyContent: 'center'
+                            }}>
+                                <Entypo name="chevron-thin-down"
+                                        style={{fontSize: 26, color: 'rgb(55, 154, 255)'}}/>
+                            </View>
+                        </View>
+                        <View style={{width: window.width, height: 1, backgroundColor: '#f0f3f7', opacity: 0.7}}>
+                        </View>
+                        <View style={{width: window.width, height: 60, flexDirection: 'row'}}>
+                            <View style={{flex: 1, paddingLeft: 10, justifyContent: 'center'}}>
+                                <Text style={{fontSize: 16, fontWeight: 'bold', color: '#4d4b4e'}}>Children and
+                                    Extra Beds</Text>
+                            </View>
+                            <View style={{
+                                flex: 1,
+                                paddingRight: 10,
+                                alignItems: 'flex-end',
+                                justifyContent: 'center'
+                            }}>
+                                <Entypo name="chevron-thin-down"
+                                        style={{fontSize: 26, color: 'rgb(55, 154, 255)'}}/>
+                            </View>
+                        </View>
+
+                        <View style={{width: window.width, height: 5, backgroundColor: Colors.lightGrey}}/>
+
+                        <View style={{
+                            width: window.width,
+                            height: 260,
+                            paddingBottom: 10,
+                            backgroundColor: '#f0f3f7'
+                        }}>
+                            <View style={{
+                                backgroundColor: '#ffffff',
+                                height: 250,
+                                paddingLeft: 10,
+                                paddingRight: 10,
+                                paddingTop: 15
+                            }}>
+                                <View style={{height: 20, flexDirection: 'row'}}>
+                                    <View style={{flex: 1.5}}>
+                                        <Text style={{color: '#4d4b4e', fontSize: 20, fontWeight: 'bold'}}>1500+
+                                            Reviews</Text>
+                                    </View>
+                                    <View style={{flex: 0.5, alignItems: 'flex-end'}}>
+                                        <Text style={{color: 'rgb(55, 154, 255)'}}>VIEW ALL</Text>
+                                    </View>
+                                </View>
+                                <View style={{height: 30, paddingTop: 20, flexDirection: 'row'}}>
+                                    <View style={{
+                                        flex: 0.16,
+                                        backgroundColor: '#00b96e',
+                                        height: 20,
+                                        marginLeft: 3,
+                                        alignItems: 'center',
+                                        justifyContent: 'center'
+                                    }}>
+                                        <Text style={{
+                                            fontSize: 16,
+                                            color: '#ffffff',
+                                            fontWeight: 'bold'
+                                        }}>4.0/5</Text>
+                                    </View>
+                                    <View style={{
+                                        flex: 0.44,
+                                        height: 20,
+                                        paddingLeft: 3,
+                                        flexDirection: 'column',
+                                        alignItems: 'flex-start',
+                                        justifyContent: 'center'
+                                    }}>
+                                        <Text style={{fontSize: 15, color: '#4d4b4e', fontWeight: 'bold'}}> Sachin
+                                            Rangwani </Text>
+                                    </View>
+                                    <View style={{
+                                        flex: 0.4,
+                                        height: 20,
+                                        paddingLeft: 3,
+                                        flexDirection: 'column',
+                                        alignItems: 'flex-end',
+                                        justifyContent: 'center'
+                                    }}>
+                                        <Text style={{fontSize: 14, color: '#4d4b4e', opacity: 0.7}}> 07 May </Text>
+                                    </View>
+                                </View>
+                                <View style={{height: 50, paddingTop: 20, flexDirection: 'row'}}>
+                                    <View style={{flex: 0.05, justifyContent: 'center'}}>
+                                        <Feather name="shield" style={{color: Colors.green}}></Feather>
+                                    </View>
+                                    <View style={{flex: 0.95, justifyContent: 'center'}}>
+                                        <Text style={{color: Colors.green, marginLeft: 3}}>Verified Guest</Text>
+                                    </View>
+                                </View>
+                                <View style={{height: 90, paddingTop: 20}}>
+                                    <Text style={{fontStyle: 'italic', color: Colors.black}}>
+                                        “Best hotel with good location and polite staff. It’s nearby the metro station
+                                        and had an amazing time over here. I would love to visit again.“Best hotel with
+                                        good location and polite staff. It’s nearby the metro station.”
+                                    </Text>
+                                </View>
+                            </View>
+                        </View>
+                        <View style={{
+                            width: window.width,
+                            paddingBottom: 40,
+                            paddingTop: 40,
+                            backgroundColor: '#f0f3f7'
+                        }}>
+                            <View style={{paddingBottom: 20}}>
+                                <Text style={{color: Colors.black, fontSize: 18, fontWeight: 'bold'}}>FABHOTELS
+                                    NEARBY</Text>
+                            </View>
+                            <ScrollView horizontal={true} style={{height: 190, backgroundColor: Colors.white}}>
+                                <View style={{
+                                    paddingTop: 20,
+                                    paddingBottom: 20,
+                                    paddingLeft: 10,
+                                    paddingRight: 10,
+                                    width: 400,
+                                    height: 150,
+                                    flexDirection: 'row'
+                                }}>
+                                    <View style={{flex: 0.32, flexDirection: 'column'}}>
+                                        <View style={{height: 130}}>
+                                            <Image
+                                            resizeMode={'cover'}
+                                            source={{
+                                                uri: 'https://pimg.fabhotels.com/propertyimages/642/main/main-photos-fabhotel-cabana-gk1-new-delhi-Hotels-20180115010632.jpg'
+                                            }} style={{
+                                                height: '100%',
+                                                width: '100%'
+                                            }}
+                                            />
+                                        </View>
+                                        <View style={{height: 20, backgroundColor: Colors.green, alignItems: 'center'}}>
+                                            <Text style={{color: Colors.white, fontWeight: 'bold'}}>37% Discount</Text>
+                                        </View>
+                                    </View>
+                                    <View style={{flex: 0.68, paddingLeft: 10, flexDirection: 'column'}}>
+                                        <View>
+                                            <Text style={{fontSize: 18, color: Colors.lightBlue, fontWeight: 'bold'}}>FabHotel Daffodil</Text>
+                                            <Text style={{fontSize: 14, color: Colors.grey, opacity: 0.5, paddingTop: 3}}>Connaught Place</Text>
+                                        </View>
+                                        <View style={{paddingTop: 5, flexDirection: 'row', height: 30}}>
+                                            <View style={{flex: 0.2, backgroundColor: Colors.green, alignItems: 'center', justifyContent: 'center'}}>
+                                                <Text style={{color: Colors.white, fontWeight: 'bold', fontSize: 15}}>4.2/5</Text>
+                                            </View>
+                                            <View style={{flex: 0.8, marginLeft: 5, alignItems: 'flex-start', justifyContent: 'center'}}>
+                                                <Text style={{fontSize: 12, color: Colors.green, fontWeight: 'bold'}}>220 Reviews</Text>
+                                            </View>
+                                        </View>
+                                        <View style={{paddingTop: 30, flexDirection: 'row'}}>
+                                            <View style={{flex: 0.1, alignItems: 'center', justifyContent: 'center'}}>
+                                                <Text style={{color: Colors.black, fontWeight: 'bold', fontSize: 15}}>F</Text>
+                                            </View>
+                                            <View style={{flex: 0.9, marginLeft: 5, alignItems: 'flex-start', justifyContent: 'center'}}>
+                                                <Text style={{fontSize: 12, color: Colors.black}}>Earn upto 200 points</Text>
+                                            </View>
+                                        </View>
+                                        <View>
+                                            <Text style={{fontSize: 12, color: Colors.black}}>Per night price</Text>
+                                        </View>
+                                    </View>
+                                </View>
+                            </ScrollView>
+                        </View>
                     </View>
                 </ScrollView>
                 {/* End Scroll View */}
@@ -446,7 +572,7 @@ class AppRoot extends React.Component {
                                     textDecorationLine: 'line-through',
                                     textDecorationStyle: 'solid',
                                     fontSize: 11
-                                }}></FontAwesome>
+                                }}/>
                                 <Text style={{
                                     color: '#3c3c3c',
                                     opacity: 0.69,
@@ -456,7 +582,7 @@ class AppRoot extends React.Component {
                                 }}>1,666</Text>
                             </View>
                             <View style={{flexDirection: 'row', paddingLeft: 12}}>
-                                <FontAwesome name="rupee" style={{color: '#3c3c3c', fontSize: 16}}></FontAwesome>
+                                <FontAwesome name="rupee" style={{color: '#3c3c3c', fontSize: 16}}/>
                                 <Text style={{color: '#3c3c3c', fontSize: 16}}>1,053/night</Text>
                             </View>
                         </View>
@@ -464,8 +590,7 @@ class AppRoot extends React.Component {
                     <View style={Styles.footerTabs}>
                         <TouchableOpacity
                             onPress={() => console.log('button pressed')}
-                            style={Styles.footerButton}
-                        >
+                            style={Styles.footerButton}>
                             <Text style={{color: '#1e254a', fontSize: 16, fontWeight: 'bold'}}>SELECT ROOM</Text>
                         </TouchableOpacity>
                     </View>

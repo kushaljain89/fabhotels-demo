@@ -98,5 +98,15 @@ export const Styles = StyleSheet.create({
         width: window.width,
         backgroundColor: Colors.lightGrey,
         marginTop: 10
+    },
+    triangleCorner: {
+        width: 0,
+        height: 0,
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderRightWidth: 20,
+        borderTopWidth: 20,
+        borderRightColor: 'transparent',
+        borderTopColor: Colors.white
     }
 });
